@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @dplan_header_copyright
+ * @package     digitalni-plan/cloudflare
+ * @copyright   Copyright (c) 2023. Digitalni plan d.o.o.
+ * @author      Neven Kajić <neven.kajic@digitalniplan.com>, <nkajic@gmail.com>
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <dplan_cloudflare>
+            <general>
+                <enabled>0</enabled>
+            </general>
+            <api>
+                <token backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+                <zone_id backend_model="Magento\Config\Model\Config\Backend\Encrypted" />
+            </api>
+        </dplan_cloudflare>
+    </default>
+</config>

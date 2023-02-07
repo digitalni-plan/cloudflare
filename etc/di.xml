@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @dplan_header_copyright
+ * @package     digitalni-plan/cloudflare
+ * @copyright   Copyright (c) 2023. Digitalni plan d.o.o.
+ * @author      Neven Kajić <neven.kajic@digitalniplan.com>, <nkajic@gmail.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="DPlan\Sync\Model\Destination\Entity\Product\ImageVariants">
+        <plugin name="dplan_cloudflare_dplan_sync_product_image_variants"
+                type="DPlan\CloudFlare\Plugin\DPlan\Sync\Product\ImageVariants"/>
+    </type>
+</config>

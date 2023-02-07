@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @dplan_header_copyright
+ * @package     digitalni-plan/cloudflare
+ * @copyright   Copyright (c) 2023. Digitalni plan d.o.o.
+ * @author      Neven Kajić <neven.kajic@digitalniplan.com>, <nkajic@gmail.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Magento_Backend::stores">
+					<resource id="Magento_Backend::stores_settings">
+						<resource id="Magento_Config::config">
+							<resource id="DPlan_CloudFlare::config_dplan_cloudflare" title="DPlan_CloudFlare"/>
+						</resource>
+					</resource>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

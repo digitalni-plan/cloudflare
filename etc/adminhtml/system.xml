@@ -1,0 +1,48 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @dplan_header_copyright
+ * @package     digitalni-plan/cloudflare
+ * @copyright   Copyright (c) 2023. Digitalni plan d.o.o.
+ * @author      Neven Kajić <neven.kajic@digitalniplan.com>, <nkajic@gmail.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="dplan" sortOrder="999" translate="label">
+            <label>Digitalni plan d.o.o.</label>
+        </tab>
+        <section id="dplan_cloudflare" translate="label" showInDefault="1" sortOrder="150">
+            <tab>dplan</tab>
+            <label>DPlan CloudFlare</label>
+            <resource>DPlan_CloudFlare::config_dplan_cloudflare</resource>
+            <group id="general" translate="label" sortOrder="10" showInDefault="1">
+                <label>General</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+            </group>
+            <group id="api" translate="label" sortOrder="20" showInDefault="1">
+                <label>API</label>
+                <depends>
+                    <field id="dplan_cloudflare/general/enabled">1</field>
+                </depends>
+                <field id="token" translate="label" type="obscure" sortOrder="10" showInDefault="1">
+                    <label>API Token</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <depends>
+                        <field id="dplan_cloudflare/general/enabled">1</field>
+                    </depends>
+                </field>
+                <field id="zone_id" translate="label" type="obscure" sortOrder="20" showInDefault="1">
+                    <label>Zone ID</label>
+                    <backend_model>Magento\Config\Model\Config\Backend\Encrypted</backend_model>
+                    <depends>
+                        <field id="dplan_cloudflare/general/enabled">1</field>
+                    </depends>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>

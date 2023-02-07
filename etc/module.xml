@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * @dplan_header_copyright
+ * @package     digitalni-plan/cloudflare
+ * @copyright   Copyright (c) 2023. Digitalni plan d.o.o.
+ * @author      Neven Kajić <neven.kajic@digitalniplan.com>, <nkajic@gmail.com>
+ */
+ -->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Module/etc/module.xsd">
+    <module name="DPlan_CloudFlare"/>
+</config>
