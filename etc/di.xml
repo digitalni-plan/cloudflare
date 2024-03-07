@@ -17,7 +17,7 @@
         <arguments>
             <argument name="alternativeHeaders" xsi:type="array">
                 <item name="http-cf-connecting-ip" xsi:type="string">HTTP_CF_CONNECTING_IP</item>
-                <item name="http-x-forwarded-for" xsi:type="string">HTTP_X_FORWARDED_FOR</item>
+                <!-- <item name="http-x-forwarded-for" xsi:type="string">HTTP_X_FORWARDED_FOR</item> -->
             </argument>
         </arguments>
     </type>
